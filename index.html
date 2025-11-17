@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-zinc-900 w-screen h-screen text-white flex justify-center items-center">
+  <div class="container w-[60%] h-[90%] bg-zinc-800 rounded-lg p-5 flex flex-col gap-4">
+    <div class="addTask w-full h-[15%] bg-zinc-700 rounded-lg flex items-center gap-4 px-6 justify-center">
+      <input class="task-input-name border-2 border-gray-400 outline-none rounded-lg px-3 py-1 w-[30%]" type="text"
+        placeholder="Enter Task name">
+
+      <input class=" task-input-desc border-2 border-gray-400 rounded-lg outline-none px-3 py-1 w-[50%]" type="text"
+        placeholder="Enter task Description">
+
+      <button class="add-btn cursor-pointer bg-blue-600 rounded-lg px-8 py-1 active:scale-90"
+        onclick="handleAddTask()">Add</button>
+    </div>
+
+    <div class="tasksContainer flex flex-col gap-2 w-full h-[85%] bg-zinc-700 rounded-lg p-5">
+
+      <div
+        class="task bg-zinc-800 w-full flex justify-evenly items-center rounded-lg p-2 mt-2 font-bold text-orange-400">
+        <div class="task-name w-[30%]">Tasks</div>
+        <div class="task-desc w-[50%]">Description</div>
+        <div class="status">Status</div>
+      </div>
+
+      <h2 class="font-bold text-lg underline underline-offset-4">Remaining Tasks</h2>
+      <div class="remainingTasks bg-gray-600 w-full p-2 rounded-lg max-h-[45%] overflow-y-auto">
+
+
+      </div>
+
+      <h2 class="font-bold text-lg underline underline-offset-4 mt-2">Completed Tasks</h2>
+      <div class="completedTasks bg-gray-600 rounded-lg p-2 w-full max-h-[45%] overflow-y-auto">
+
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
+</html>
